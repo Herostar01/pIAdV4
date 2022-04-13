@@ -405,7 +405,7 @@ const InjuryHelp = (props) => {
                 <h2>Your cell phone number? *</h2>
                 <TextareaAutosize
                     className='TextareaAuto'
-                    onChange={(e) => setNine(e.target.value)} value={nine} 
+                    onChange={(e) => setTen(e.target.value)} value={ten} 
                 /> <br />
 
             
