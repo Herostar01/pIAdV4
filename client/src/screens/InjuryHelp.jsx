@@ -1,8 +1,8 @@
 import React from 'react' //for newer versions, no longer need this line
 import { useState, useEffect } from 'react'
 import '../App.css'
+import TextareaAutosize from 'react-textarea-autosize';
 
-import { Form, Row, Col, Button } from 'react-bootstrap'
 import { useNavigate, Link } from 'react-router-dom'
 import axios from 'axios'
 
@@ -75,7 +75,7 @@ const InjuryHelp = (props) => {
     const createProspect = (e) => {
         e.preventDefault();
         console.log("Prospect Data Saved")
-        navigate('/Evaluation')
+        
 
         const newProspect = {
             one: one,
@@ -94,7 +94,7 @@ const InjuryHelp = (props) => {
             .then(res => {
                 console.log(res.data);
                 console.log("success adding a Prospect!!");
-                navigate("/next")
+                navigate("/Evaluation")
             })
             .catch(err => {
                 console.log("ERROR ❌ Couldn't Ad Prospect!");
@@ -137,13 +137,8 @@ const InjuryHelp = (props) => {
             You May be Entitled to Maximum Compensation. Take this 60 second qualification and find out:
         </h1>
 
-        
 
             
-
-            {/* {
-                errors.map((err, index) => <p key={index} style={{color: "red"}}>{err}</p>)
-            } */}
             {
                 dbErrors.map((err, index) => <p key={index} style={{color: "red"}}>{err}</p>)
             }
@@ -152,8 +147,8 @@ const InjuryHelp = (props) => {
                 <div style={{display: "flex", flexDirection: "column", alignItems: "center", alignContent: "space-between",justifyContent: "space-between",  padding: "15px" , border: "2px solid black", height: "auto", width: "auto" }} >
 
                 
-                <h2>  How were you hurt? * </h2>
-                <input type="textarea" onChange={(e) => setOne(e.target.value)} value={one} /> <br />
+                {/* <h2>  How were you hurt? * </h2>
+                <input type="textarea" onChange={(e) => setOne(e.target.value)} value={one} /> <br /> */}
 
 
             
@@ -201,8 +196,8 @@ const InjuryHelp = (props) => {
 
                     </div> <br /> 
 
-                <h2> How long ago was your accident? *  </h2>
-                <input type="text" onChange={(e) => setTwo(e.target.value)} value={two} /><br />
+                {/* <h2> How long ago was your accident? *  </h2>
+                <input type="text" onChange={(e) => setTwo(e.target.value)} value={two} /><br /> */}
 
                 <div>
                 <h2>  How long ago was your accident? * </h2>
@@ -238,9 +233,9 @@ const InjuryHelp = (props) => {
 
                     </div> <br />
 
-                <h2>  Was the accident your fault? * </h2>
+                {/* <h2>  Was the accident your fault? * </h2>
                 <input type="text" onChange={(e) => setThree(e.target.value)} value={three} /><br />
-                <br />
+                <br /> */}
 
                 <div>
                 <h2>  Was the accident your fault? * </h2>
@@ -269,8 +264,8 @@ const InjuryHelp = (props) => {
                     </div> <br />
 
 
-                Did the police arrive? *  
-                <input type="text" onChange={(e) => setFour(e.target.value)} value={four} /><br />
+                {/* <h2>  Did the police arrive? * </h2> 
+                <input type="text" onChange={(e) => setFour(e.target.value)} value={four} /><br /> */}
 
                 <div>
                 <h2>  Did the police arrive? * </h2>
@@ -298,8 +293,8 @@ const InjuryHelp = (props) => {
 
                     </div> <br />
 
-                <h2>  How were you injured? * </h2>
-                <input type="text" onChange={(e) => setFive(e.target.value)} value={five} /><br />
+                {/* <h2>  How were you injured? * </h2>
+                <input type="text" onChange={(e) => setFive(e.target.value)} value={five} /><br /> */}
 
                 <div>
                 <h2>  How were you injured? * </h2>
@@ -334,11 +329,11 @@ const InjuryHelp = (props) => {
 
                     </div> <br />
 
-                <h2>  Are you currently represented by an attorney in this accident? * </h2>
+                {/* <h2>  Are you currently represented by an attorney in this accident? * </h2>
                 <input type="text" onChange={(e) => setSix(e.target.value)} value={six} /><br />
-                <br />
+                <br /> */}
 
-                <div>
+                <div >
                 <h2>  Are you currently represented by an attorney in this accident? * </h2>
                     <label>
                     <input type="radio" 
@@ -371,31 +366,55 @@ const InjuryHelp = (props) => {
 
                     </div> <br />
 
-                <h1>
+                <h2>
                     Please describe your accidents and injuries? *
-                </h1>
-                <input type="textbox" onChange={(e) => setSeven(e.target.value)} value={seven} /><br />
-                <br />
+                </h2> <br />
+                {/* <input type="text" onChange={(e) => setSeven(e.target.value)} value={seven} /><br /> */}
 
+                <TextareaAutosize
+                    className='TextareaAuto'
+                    onChange={(e) => setSeven(e.target.value)} value={seven} 
+                /> <br />
+
+                <h2>
                 What's your full name? *
-                <input type="text" onChange={(e) => setEight(e.target.value)} value={eight} /><br />
+                </h2>
+                {/* <input type="text" onChange={(e) => setEight(e.target.value)} value={eight} /><br />
+                <br /> */} 
                 <br />
 
-                What's your best email? *
-                <input type="text" onChange={(e) => setNine(e.target.value)} value={nine} /><br />
+                <TextareaAutosize
+                    className='TextareaAuto'
+                    onChange={(e) => setEight(e.target.value)} value={eight} 
+                /> <br />
+
+                {/* <h2>What's your best email? *</h2>
+                <input type="text" onChange={(e) => setNine(e.target.value)} value={nine} /><br /> */}
                 <br />
 
-                Your cell phone number? *
-                <input type="text" onChange={(e) => setTen(e.target.value)} value={ten} /><br />
+                <h2>What's your best email? *</h2>
+                <TextareaAutosize
+                    className='TextareaAuto'
+                    onChange={(e) => setNine(e.target.value)} value={nine} 
+                /> <br />
+
+                {/* <h2>Your cell phone number? *</h2>
+                <input type="text" onChange={(e) => setTen(e.target.value)} value={ten} /><br /> */}
                 <br />
+
+                <h2>Your cell phone number? *</h2>
+                <TextareaAutosize
+                    className='TextareaAuto'
+                    onChange={(e) => setNine(e.target.value)} value={nine} 
+                /> <br />
 
             
 
+                <button className='btn' >Submit Information</button>
 
 
                 </div>
                 
-                <button className='btn' >Submit Information</button>
 
             </form>
         
