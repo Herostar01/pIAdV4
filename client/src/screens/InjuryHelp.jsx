@@ -305,34 +305,76 @@ const InjuryHelp = (props) => {
                 <h2>  How were you injured? * </h2>
                     <label>
                     <input type="radio" 
-                    value="Yes" 
-                    checked={four === 'Yes'} 
-                    onChange={handleChangeFour} />
-                    Yes <br />
+                    value="Fatality or Wrongful Death" 
+                    checked={five === 'Fatality or Wrongful Death'} 
+                    onChange={handleChangeFive} />
+                    Fatality or Wrongful Death <br />
                     </label>
 
                     <label>
                     <input type="radio" 
-                    value="No" checked={four === 'No'} 
-                    onChange={handleChangeFour} />
-                    No <br />
+                    value="Severe Injury: Fractures, Body Injury, Concussion" checked={five === 'Severe Injury: Fractures, Body Injury, Concussion'} 
+                    onChange={handleChangeFive} />
+                    Severe Injury: Fractures, Body Injury, Concussion <br />
                     </label>
 
                     <label>
                     <input type="radio" 
-                    value="I don't know" checked={four === "I don't know"} 
-                    onChange={handleChangeFour} />
-                    I don't know <br />
+                    value="Moderate Injury: Neck, Back Pain or Whisplash" checked={five === "Moderate Injury: Neck, Back Pain or Whisplash"} 
+                    onChange={handleChangeFive} />
+                    Moderate Injury: Neck, Back Pain or Whisplash <br />
+                    </label>
+
+                    <label>
+                    <input type="radio" 
+                    value="No Physical Injuries" checked={five === "No Physical Injuries"} 
+                    onChange={handleChangeFive} />
+                    No Physical Injuries <br />
                     </label>
 
                     </div> <br />
 
-                Are you currently represented by an attorney in this accident? *
+                <h2>  Are you currently represented by an attorney in this accident? * </h2>
                 <input type="text" onChange={(e) => setSix(e.target.value)} value={six} /><br />
                 <br />
 
-                Please describe your accidents and injuries? *
-                <input type="text" onChange={(e) => setSeven(e.target.value)} value={seven} /><br />
+                <div>
+                <h2>  Are you currently represented by an attorney in this accident? * </h2>
+                    <label>
+                    <input type="radio" 
+                    value="No, I do not have an attorney" 
+                    checked={six === 'No, I do not have an attorney'} 
+                    onChange={handleChangeSix} />
+                    No, I do not have an attorney <br />
+                    </label>
+
+                    <label>
+                    <input type="radio" 
+                    value="I have an attorney but I need someone else to represent my case" checked={six === 'I have an attorney but I need someone else to represent my case'} 
+                    onChange={handleChangeSix} />
+                    I have an attorney but I need someone else to represent my case <br />
+                    </label>
+
+                    <label>
+                    <input type="radio" 
+                    value="Yes, I have an attorney" checked={six === "Yes, I have an attorney"} 
+                    onChange={handleChangeSix} />
+                    Yes, I have an attorney <br />
+                    </label>
+
+                    <label>
+                    <input type="radio" 
+                    value="I have already settled my case" checked={six === "I have already settled my case"} 
+                    onChange={handleChangeSix} />
+                    I have already settled my case <br />
+                    </label>
+
+                    </div> <br />
+
+                <h1>
+                    Please describe your accidents and injuries? *
+                </h1>
+                <input type="textbox" onChange={(e) => setSeven(e.target.value)} value={seven} /><br />
                 <br />
 
                 What's your full name? *
