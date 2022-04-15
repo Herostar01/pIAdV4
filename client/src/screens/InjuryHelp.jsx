@@ -7,7 +7,7 @@ import { useNavigate, Link } from 'react-router-dom'
 import axios from 'axios'
 
 const InjuryHelp = (props) => {
-    const navigate = useNavigate
+    const navigate = useNavigate()
     // use one state and make it an object, 
     //it would be like useState {} key would be one, two, three, etc...
     //when using onChange with radio buttons, use spread operator 
@@ -74,7 +74,7 @@ const InjuryHelp = (props) => {
 
     const createProspect = (e) => {
         e.preventDefault();
-        console.log("Prospect Data Saved")
+        // navigate("/Evaluation")
         
 
         const newProspect = {
@@ -114,10 +114,14 @@ const InjuryHelp = (props) => {
     return (
     
     <div>
+
+        <div className='formQ' >
+
         
         <h1 className='gold'>
-        Rana Law Office
+        Rana Law Office 
         </h1>
+        
 
         <h1 className='redWhite'>
             Auto Accident & Injury Help
@@ -137,10 +141,11 @@ const InjuryHelp = (props) => {
             You May be Entitled to Maximum Compensation. Take this 60 second qualification and find out:
         </h1>
 
+        </div>
 
             
             {
-                dbErrors.map((err, index) => <p key={index} style={{color: "red"}}>{err}</p>)
+                dbErrors.map((err, index) => <p key={index} style={{color: "red", fontSize: "25px"}}>{err}</p>)
             }
 
             <form onSubmit={createProspect} >
@@ -155,7 +160,7 @@ const InjuryHelp = (props) => {
             
             {/* Use TailWind for buttons, 
             Use import react dropdown via select  */}
-                <div>
+                <div  >
                 <h2>  How were you hurt? * </h2>
                     <label>
                     <input type="radio" 

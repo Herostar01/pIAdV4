@@ -46,7 +46,7 @@ const ProspectSchema = new mongoose.Schema({
     ten: {
         type: String,
         required: [true, "Please write your ten digit cell phone number"],
-        minlength: [3, "Please write your ten digit cell phone number"]
+        minlength: [10, "Please enter your ten digit cell phone number"]
 
     }
 

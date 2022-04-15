@@ -3,7 +3,7 @@
 }
 
 .gold {
-  color: goldenrod;
+  color: rgb(250, 181, 6);
   background-color: black;
   padding: 15px;
   font-size: 50px;
@@ -33,7 +33,7 @@ label {
 }
 
 .btn {
-  color: goldenrod;
+  color: rgb(230, 167, 8);
   background-color: black;
   padding: 15px;
   font-size: 50px;
@@ -62,4 +62,11 @@ input[type=radio] {
   border: "2px solid black";
   height: "auto";
   width: "auto"
+}
+
+.formQ {
+  display: flex;
+  
+  flex-direction: column;
+  
 }
