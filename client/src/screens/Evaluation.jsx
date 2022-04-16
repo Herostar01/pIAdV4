@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Button} from 'react-bootstrap'
 import { Checkmark } from 'react-checkmark'
 import "../App.css"
 import { useNavigate } from 'react-router-dom'
@@ -62,7 +62,7 @@ Rana Law Office
 
 <div className='callNowDiv' > 
 
-<button variant='contained' className='callNow' onClick={SendToRana}>
+<Button variant='success' className='callNow' onClick={SendToRana}>
 
     <h2 >
         Or Click to Conact Us Now
@@ -71,7 +71,7 @@ Rana Law Office
         Absolutely Free Case Evaluation
     </h2>
 
-</button>
+</Button>
 
 </div>
 
