@@ -6,7 +6,7 @@ const Redirect = ( {url} ) => {
       window.location.href = url;
    }, [url]);
 
-   return <h5>Redirecting...</h5>;
+   return <h1 className="gold">Redirecting...</h1>;
 };
 
 export default Redirect;

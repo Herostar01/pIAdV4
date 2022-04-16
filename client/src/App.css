@@ -9,6 +9,20 @@
   font-size: 50px;
 }
 
+.whiteBlack {
+  color: white;
+  background-color: black;
+  padding: 15px;
+  font-size: 50px;
+}
+
+.blackWhite {
+  color: black;
+  background-color: white;
+  padding: 15px;
+  font-size: 50px;
+}
+
 .redWhite {
   color: white;
   background-color: red;
@@ -30,6 +44,12 @@ label {
 
 .App {
   text-align: center;
+}
+
+.EvalPage {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .btn {
@@ -68,5 +88,22 @@ input[type=radio] {
   display: flex;
   
   flex-direction: column;
+  
+}
+
+.callNow {
+  color: white;
+  background-color: red;
+  font-size: 30px;
+  padding: 30px;
+  margin: 40px;
+  width: auto;
+}
+
+.callNowDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   
 }
