@@ -108,3 +108,23 @@ input[type=radio] {
   align-items: center;
   
 }
+
+/* Mobile Landscape Styling */
+@media screen and (min-width: 640px) {
+
+}
+
+/* Tablet Portrait Styling */
+@media screen and (min-width: 768px) {
+
+}
+
+/* Tablet Landscape Styling */
+@media screen and (min-width: 1024px) {
+
+}
+
+/* LapTop styling */
+@media screen and (min-width: 1280px) {
+
+}
